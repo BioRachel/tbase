@@ -4,7 +4,7 @@ import './css/index.css';
 import App from './components/App';
 import * as serviceWorker from './components/serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
-require('materialize-css/dist/css/materialize.min.css');
+require('materialize-css/dist/css/materialize.css');
 
 ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
 

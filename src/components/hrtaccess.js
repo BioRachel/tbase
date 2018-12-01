@@ -8,7 +8,7 @@ class HRTaccess extends Component {
     super(props);
     this.state = {
       data: [],
-      search: ''
+      filter: ''
     };
     this.handleSearch = this.handleSearch.bind(this);
     this.handleSort = this.handleSort.bind(this);
@@ -27,9 +27,38 @@ class HRTaccess extends Component {
   };
 
   // searches the returned table if its loaded
-  handleSearch(e, value) {
-    console.log(e, value)
-  };
+  handleSearch() {
+    // Declare variables 
+    var input, filter, table, tr, tds, td_str, i, txtValue;
+    input = document.getElementById("search").value;
+    filter = input.toUpperCase();
+    table = document.getElementById("accessTable");
+    tr = table.getElementsByTagName("tr"); // slow
+    if (input == '' || input == ' ') {
+      for (i = 0; i < tr.length; i++) {
+        tr[i].style.display = "";
+      };
+    };
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      tds = tr[i].getElementsByTagName("td");
+      var td = [];
+      for (var j = 0; j < tds.length; j++) {
+        td.push(tds[j].innerText)
+      };
+      td_str = td.join(' ');
+
+      if (td_str) {
+        if (td_str.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      } 
+
+    }
+  }
 
   // sorts the table based on column clicked
   handleSort(event, sortKey) {
@@ -42,13 +71,9 @@ class HRTaccess extends Component {
   render() {
     // all elements
     const elements = this.state.data;
-    var filterStr = this.state.filter;
-
-    // elements remaining after filter
-    var filteredElements = elements;
 
     // maps the filtered elements to a table row
-    var displayElements = filteredElements.map(function(item, key) {  
+    var displayElements = elements.map(function(item, key) {  
       return (
         <tr key = {key}>
           <td>{item.country}</td>
@@ -66,9 +91,9 @@ class HRTaccess extends Component {
         <br></br>
         <h2>HRT access per region</h2>
         <br></br>
-        <input type="text" id="search" onKeyUp={e =>this.handleSearch(e, this)} placeholder="Search"></input>
+        <input type="text" id="search" onKeyUp={e => this.handleSearch()} placeholder="Search"></input>
         <div className='response-body'>
-          <table>
+          <table id='accessTable'>
             <thead>
               <tr>
                 <th onClick={e => this.handleSort(e, 'country')}>Country</th>

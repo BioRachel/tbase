@@ -11,6 +11,8 @@ for i in range(len(hrt)):
         if type(hrt[i][j]) == float:
             hrt[i][j] = ''
 
+    hrt[i].append(' '.join(hrt[i]))
+
 access_dict = { 'items': [] }
 for item in hrt:
   access_dict['items'].append(
@@ -21,6 +23,8 @@ for item in hrt:
       'process': item[3],
       'clinic': item[4],
       'doctors': item[5],
+      'tags': item[6],
+      'description': item[7]
     }
   )
 
