@@ -5,7 +5,7 @@ class Section extends Component {
     return (
       <div className='section' id={this.props.name}>
         <div className='subtitle-small'>{this.props.name}</div>
-        {this.props.content}
+        <div className='section-content'>{this.props.content}</div>
       </div>
     );
   }

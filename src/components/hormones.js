@@ -6,7 +6,7 @@ import chemical from '../images/chemical.png';
 class Hormones extends Component {
 
   render() {
-    var section_list = ['Introduction', 'Estrogen types in HRT', 'Blood levels', 'Dosages', 'Which estrogenic drug is right for you'];
+    var section_list = ['Overview', 'Estrogen types in HRT', 'Blood levels', 'Dosages', 'Which estrogenic drug is right for you'];
 
     var introduction = <div><p>Estrogen (oestrogen) is a core part of MTF Hormone Replacement Therapy (HRT). It causes a more feminine appearance due to skin softening, fat distribution changes, breast growth, as well as many other factors.</p>
     <p>Estrogen not only causes physical changes – estrogen receptors are found in many places including the liver, bone marrow, adipose tissue and brain, and so impact many bodily systems including the nervous system[1]. </p>

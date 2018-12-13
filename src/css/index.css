@@ -1,10 +1,17 @@
+$mainPink: #fc54ff;
+$mainPurple: #9600ff;
+$mainBlue: #34e1fb;
+$mainMedBlue: #00b8ff;
+$mainLightBlue: #00fff9;
+$mainDarkGrey: #131517;
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .purple_grad {
-  background-image: linear-gradient(to bottom right, #fc54ff, #34e1fb) !important;
+  background-image: linear-gradient(to bottom right, $mainPink, $mainBlue) !important;
 }
 
 
@@ -29,8 +36,8 @@ main {
 
 h1 {
   font-family: 'Dosis', sans-serif !important;
-  color: rgba(91, 119, 196, 0.904);
-  border-bottom: 1.5px solid rgba(155, 172, 219, 0.904);
+  color: $mainMedBlue;
+  border-bottom: 1.5px solid $mainMedBlue;
 }
 
 .spinner:before {
@@ -44,8 +51,8 @@ h1 {
   margin-top: -30px;
   margin-left: -30px;
   border-radius: 50%;
-  border: 3px solid lightgrey;
-  border-top-color: purple;
+  border: 3px solid grey;
+  border-top-color: $mainPurple;
   animation: spin 0.7s linear infinite;
   z-index: 99;
   display: visible;
@@ -68,19 +75,25 @@ h1 {
   font-family: 'Dosis', sans-serif !important;
   font-size: 48pt;
   width: 100%;
-  color: #4209ab;
+  color: $mainPurple;
   margin: 50px 0 0 0;
+
+  &-underline {
+    display: block;
+    border-bottom: 2px solid darkgrey;
+    font-family: 'Dosis', sans-serif !important;
+    font-size: 42pt;
+  }
+
+  &-icon {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    margin: 0px 20px 0px 20px;
+  }
+
 }
 
-.title-underline {
-  display: block;
-  position: relative;
-  border-bottom: 2px solid darkgrey;
-  font-family: 'Quicksand', sans-serif !important;  
-  font-size: 42pt;
-  width: 100%;
-  margin: 50px 0 0 0;
-}
 
 .subtitle {
   display: block;
@@ -89,18 +102,15 @@ h1 {
   font-family: 'Dosis', sans-serif !important;
   font-size: 28pt;
   width: 100%;
-  color: #6d37d3;
+  color: $mainDarkGrey;
 
-}
+  &-small {
+    font-size: 20pt;
+    margin: 30px 0 0 0;
+    color: $mainDarkGrey;
+    text-align: left;
+  }
 
-.subtitle {
-  display: block;
-  position: relative;
-  text-align: center;
-  font-family: 'Dosis', sans-serif !important;
-  font-size: 28pt;
-  width: 100%;
-  color: #6d37d3;
 }
 
 .button-row {
@@ -115,12 +125,12 @@ h1 {
 
 .button {
   border-radius: 10px;
-  border: 2px solid rgb(124, 148, 216);
+  border: 1px solid $mainPink;
   flex: 1;
   height: 60px;
   text-align: center;
   font-size: 13pt;
-  color: rgb(99, 121, 182);
+  color: $mainPurple;
   margin: 0 20px;
   display: flex;
   justify-content: center;
@@ -145,10 +155,14 @@ h1 {
 .section {
   display: inline-block;
   margin: 40px 0px 20px 0;
-  padding: 70px;
-  padding-top: 100px;
-  border: 1px solid grey;
-  box-shadow: 2px grey;
+  padding: 100px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  box-shadow: 1px 2px 3px grey;
+}
+
+.section-content {
+  margin-bottom: 40px;
 }
 
 .text-center {
@@ -163,13 +177,6 @@ h1 {
   transform: translateX(-50%);
 }
 
-.title-icon {
-  display: inline-block;
-  position: relative;
-  height: 50px;
-  margin: 0px 20px 0px 20px;
-}
-
 .border-div {
   display: block;
   position: relative;
@@ -177,6 +184,7 @@ h1 {
   width: 80%;
   left: 50%;
   transform: translateX(-50%);
-  border: 2px solid rgb(159, 182, 247);
+  border: 1px solid $mainPurple;
+  box-shadow: 1px 2px 3px $mainPurple;
   border-radius: 10px;
 }
