@@ -5,6 +5,11 @@
   "dependencies": {
     "flask": "^0.2.10",
     "materialize-css": "^1.0.0-rc.2",
+    "postcss-cli": "^6.0.1",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-mixins": "^6.2.1",
+    "postcss-nested": "^4.1.0",
+    "postcss-simple-vars": "^5.0.1",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-router": "^4.3.1",

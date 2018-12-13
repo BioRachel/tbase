@@ -8,11 +8,13 @@ class HRTaccess extends Component {
     super(props);
     this.state = {
       data: [],
-      filter: ''
+      filter: '',
+      timeout: null
     };
     this.handleSearch = this.handleSearch.bind(this);
     this.handleSort = this.handleSort.bind(this);
   }
+
 
   // after the component loads, fetches the information needed from the server and sets the returned json object to this.state.data
   componentDidMount() {
@@ -28,36 +30,48 @@ class HRTaccess extends Component {
 
   // searches the returned table if its loaded
   handleSearch() {
-    // Declare variables 
-    var input, filter, table, tr, tds, td_str, i, txtValue;
-    input = document.getElementById("search").value;
-    filter = input.toUpperCase();
-    table = document.getElementById("accessTable");
-    tr = table.getElementsByTagName("tr"); // slow
-    if (input == '' || input == ' ') {
-      for (i = 0; i < tr.length; i++) {
-        tr[i].style.display = "";
-      };
-    };
-  
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-      tds = tr[i].getElementsByTagName("td");
-      var td = [];
-      for (var j = 0; j < tds.length; j++) {
-        td.push(tds[j].innerText)
-      };
-      td_str = td.join(' ');
+    var spinner = document.getElementById('spinner');
+    spinner.style.visibility = 'visible';
 
-      if (td_str) {
-        if (td_str.toUpperCase().indexOf(filter) > -1) {
+    clearTimeout(this.state.timeout);
+    
+    this.state.timeout = setTimeout(function() {
+
+      var input, filter, table, tr, tds, td_str, i;
+      input = document.getElementById("search").value;
+      filter = input.toUpperCase();
+      table = document.getElementById("accessTable");
+      tr = table.getElementsByTagName("tr"); 
+      
+      if (input === '' || input === ' ') {
+        for (i = 0; i < tr.length; i++) {
           tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      } 
+        };
+        spinner.style.visibility = 'hidden';
+        return 0;
+      };
+    
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        tds = tr[i].getElementsByTagName("td");
+        var td = [];
+        for (var j = 0; j < tds.length; j++) {
+          td.push(tds[j].innerText)
+        };
+        td_str = td.join(' ');
 
-    }
+        if (td_str) {
+          if (td_str.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        } 
+
+      };
+      spinner.style.visibility = 'hidden';
+    }, 500);
+
   }
 
   // sorts the table based on column clicked
@@ -69,6 +83,8 @@ class HRTaccess extends Component {
 
   // renders the component
   render() {
+    // if wait time is over
+
     // all elements
     const elements = this.state.data;
 
