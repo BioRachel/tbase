@@ -6,7 +6,7 @@ class Button extends Component {
     var ref = '#' + this.props.label;
 
     return (
-      <a href={ref} className='button'>
+      <a href={ref} className={this.props.class}>
         {this.props.label}
       </a>
     );

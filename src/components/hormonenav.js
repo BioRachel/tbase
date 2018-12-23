@@ -5,18 +5,22 @@ class HormoneNav extends Component {
   render() {
     return (
       <div className='border-div'>
-        <div className='subtitle' style={{ marginTop: '25px'}}>Feminizing</div>
-        <div className='button-row'>
-          <Button label='Estrogen' className='button' />
-          <Button label='Anti-androgen' className='button' />
-          <Button label='Progesterone' className='button' />
-          <Button label='Hair Growth' className='button' />
+        <div className='row'>
+          <div className='subtitle col s8'>Feminizing</div>
+          <div className='subtitle col s4'>Masculinizing</div>
         </div>
-        <div className='subtitle'>Masculinizing</div>
+
+        <div className='row'>
+          <div className='geo-mountain col s8'></div>
+          <div className='geo-mountain-2 col s4'></div>
+        </div>
+    
         <div className='button-row'>
-          <Button label='Testosterone' className='button' />
-          <Button label='Other' className='button' />
-          <div className='blank-tile-2'></div>
+          <Button label='Estrogen' class='button' />
+          <Button label='Anti-androgen' class='button' />
+          <Button label='Progesterone' class='button' />
+          <Button label='Hair Growth' class='button' />    <Button label='Testosterone' class='button blue-border' />   
+          <Button label='Progestagen' class='button blue-border' />   
         </div>
       </div>
     );

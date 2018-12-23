@@ -2,15 +2,51 @@ import React, { Component } from 'react';
 import HormoneNav from './hormonenav';
 import Topic from './topic';
 import chemical from '../images/chemical.png';
+import female from '../images/female_2.png';
 
 class Hormones extends Component {
 
   render() {
-    var section_list = ['Overview', 'Estrogen types in HRT', 'Blood levels', 'Dosages', 'Which estrogenic drug is right for you'];
+    var section_list = ['Overview', 'Effects', 'Estrogen types in HRT', 'Blood levels', 'Dosages', 'Which estrogenic drug is right for you'];
 
-    var introduction = <div><p>Estrogen (oestrogen) is a core part of MTF Hormone Replacement Therapy (HRT). It causes a more feminine appearance due to skin softening, fat distribution changes, breast growth, as well as many other factors.</p>
-    <p>Estrogen not only causes physical changes – estrogen receptors are found in many places including the liver, bone marrow, adipose tissue and brain, and so impact many bodily systems including the nervous system[1]. </p>
-    <p>The role of estrogen drugs in HRT is to achieve stable, female levels of estrogen in the tissues. There are multiple methods of taking these drugs which suit certain patients. Most modern drugs are very safe[2], but all carry a slightly increased risk of blood clot and other cardiovascular problems. </p></div>;
+    var introduction = 
+    <div className='flex-column'>
+
+      <div className='flex-row'>
+        <div className='sphere' style={{color: '#fc54ff', borderColor: '#fc54ff'}}>Estrogen</div>
+        <div className='flex-column'>
+          <div className='plus'></div>
+        </div>
+        <div className='sphere' style={{color: '#2bcbba', borderColor: '#2bcbba'}}>Anti-androgen</div>
+        
+      </div>
+
+      <div className='flex-row'>
+        <div className='flex-tile' style={{flex: 1, marginRight: '10px'}}>
+          <p className='med-text'>The two main components of feminizing HRT are estrogens and anti-androgens. They are usually prescribed together, and have different effects</p>
+          <div className='flex-row'>
+            <div className='flex-tile arrow' style={{flex:1, backgroundColor: '#fc54ff'}}></div>
+            <div className='flex-tile med-text' style={{flex:4}}><span style={{color: '#fc54ff', fontWeight: 700}}>Estrogen</span> Raises blood estrogen</div>
+            <div className='flex-tile arrow-down' style={{flex:1, backgroundColor: '#2bcbba'}}></div>
+            <div className='flex-tile med-text' style={{flex:4}}><span style={{color: '#2bcbba', fontWeight: 700}}>Anti-androgens</span> Reduce testosterone</div>
+            
+          </div>
+          <p className='med-text'>They work together to create a feminine appearence.</p>
+        </div>
+ 
+        <div className='flex-tile' style={{flex: 1, marginLeft: '10px'}}>
+          <p>Estrogen not only causes physical changes – estrogen receptors are found in many places including the liver, bone marrow, adipose tissue and brain, and so impact many bodily systems including the nervous system[1]. </p>
+          <p>For those wishing to transition, a good outcome of taking estrogenic drugs is to achieve stable, female levels of estrogen in the tissues. Most modern drugs are very safe[2], but all carry a slightly increased risk of blood clot and other cardiovascular problems. </p>
+        </div>
+      </div>
+
+    </div>;
+
+    var effects = 
+    <div className='flex-row'>
+      <div className='content-image' style={{flex: 1, height: '400px'}}><img src={female} alt='effects' className='image'></img></div>
+      <div className='flex-tile' style={{flex:1}}></div>
+    </div>;
 
     var ETH = 
     <div>
@@ -49,8 +85,8 @@ class Hormones extends Component {
           </tr>
           <tr>
             <td><b>Cycling/Injections</b></td>
-            <td className='text-center'>1200 - 1500</td>
-            <td className='text-center'>50 – 410</td>
+            <td className='text-center'>200 - 1500</td>
+            <td className='text-center'>55 – 410</td>
           </tr>
         </tbody>
       </table>
@@ -81,7 +117,7 @@ class Hormones extends Component {
       <div className='container'>
         <div className='title'>Hormones<img src={chemical} className='title-icon' alt='hormones'></img></div>
         <HormoneNav />
-        <Topic name='Estrogen' list={section_list} sections={[introduction, ETH, blood_levels, dosage, wery]}/>
+        <Topic name='Estrogen' list={section_list} sections={[introduction, effects, ETH, blood_levels, dosage, wery]}/>
       </div>
     );
   }
