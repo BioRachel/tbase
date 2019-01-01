@@ -6,6 +6,7 @@ $mainLightBlue: #00fff9;
 $greenBlue: #2bcbba;
 $mainDarkGrey: #131517;
 $mainLightGrey: #adadad;
+$orange: #ff8f1f;
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -96,6 +97,12 @@ h1 {
     margin: 0px 20px 0px 20px;
   }
 
+  &-small {
+    text-align: center;
+    font-size: 1.5em;
+    color: grey;
+  }
+
 }
 
 
@@ -109,9 +116,9 @@ h1 {
   color: $mainDarkGrey;
 
   &-small {
-    font-size: 20pt;
+    font-size: 1.8em;
     margin: 20px 0 0 0;
-    color: $mainDarkGrey;
+    color: grey;
     display: block;
   }
 
@@ -178,14 +185,10 @@ h1 {
   justify-content: center;
 }
 
-.content-image {
-  position: relative;
-  border: 2px solid red;
-}
-
 .text-center {
   text-align: center;
 }
+
 
 .image {
   display: block;
@@ -248,14 +251,9 @@ h1 {
   border-width: 3px;
   border-style: solid;
   text-align: center;
-  font-size: 20px;
-  width: 120px;
-  height: 120px;
-
-  &-small {
-    width: 80px;
-    height: 80px;
-  }
+  font-size: 1em;
+  width: 80px;
+  height: 80px;
 }
 
 .flex-column {
@@ -270,8 +268,6 @@ h1 {
   display: flex;
   justify-content: center;
   flex-direction: row;
-
-
 }
 
 .flex-tile {
@@ -279,7 +275,6 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px solid red;
 }
 
 .center {
@@ -308,10 +303,86 @@ h1 {
   -webkit-clip-path: polygon(40% 25%, 40% 40%, 100% 40%, 100% 60%, 40% 60%, 40% 75%, 0% 50%);
   clip-path: polygon(40% 25%, 40% 40%, 100% 40%, 100% 60%, 40% 60%, 40% 75%, 0% 50%);
   transform: rotate(90deg);
+  width: 50px;
+  height: 50px;
 
   &-down {
     -webkit-clip-path: polygon(40% 25%, 40% 40%, 100% 40%, 100% 60%, 40% 60%, 40% 75%, 0% 50%);
     clip-path: polygon(40% 25%, 40% 40%, 100% 40%, 100% 60%, 40% 60%, 40% 75%, 0% 50%);
     transform: rotate(-90deg);
+    width: 50px;
+    height: 50px;
   }
+}
+
+li {
+  margin-left: 30px;
+}
+
+.icon-chem {
+  width: 100px;
+}
+
+.parallelogram {
+  margin-right: 1px;
+  height: 70px;
+  width: 180px;
+  background-color: $mainPink;
+  -webkit-clip-path: polygon(100% 0, 100% 20%, 17% 100%, 0% 100%);
+  clip-path: polygon(100% 0, 100% 20%, 17% 100%, 0% 100%);
+
+  &-rev {
+    margin-left: 1px;
+    height: 70px;
+    width: 180px;
+    background-color: $greenBlue;
+    transform: scaleX(-1);
+    -webkit-clip-path: polygon(100% 0, 100% 20%, 17% 100%, 0% 100%);
+    clip-path: polygon(100% 0, 100% 20%, 17% 100%, 0% 100%);
+  }
+}
+
+.bottom20 {
+  margin-bottom: 20px;
+}
+
+.bottom50 {
+  margin-bottom: 50px;
+}
+
+.textbox {
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+
+.small-text {
+  font-size: 13pt;
+  color: rgb(138, 138, 138);
+}
+
+.bot-5 {
+  margin-bottom: -5px;
+  
+}
+
+.bot30 {
+  margin-bottom: 30px;
+  
+}
+
+.top30 {
+  margin-top: 30px;
+}
+
+.top50 {
+  margin-top: 50px;
+}
+
+.top100 {
+  margin-top: 100px;
+}
+
+.large-text {
+  font-size: 1.7em;
 }
