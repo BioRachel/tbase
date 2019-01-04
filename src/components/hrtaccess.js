@@ -83,8 +83,6 @@ class HRTaccess extends Component {
 
   // renders the component
   render() {
-    // if wait time is over
-
     // all elements
     const elements = this.state.data;
 
