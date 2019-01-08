@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class TopNav extends Component {
   render() {
     return (
-      <nav>
+      <nav id='top'>
         <div className="nav-wrapper purple_grad">
         <div className="row">
           <div className="col s12 m4 l2 center-align"><Link className="brand-logo" to='/'>Logo</Link></div>
