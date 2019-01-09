@@ -169,57 +169,67 @@ class Estrogen extends Component {
         </div>
       </div>
 
-      <div className='flex-row'>
+      <div className='flex-row' style={{ justifyContent: 'space-around' }}>
+        <div className='text-center flex-tile bot-5'>Dosage</div>
+        <div className='text-center flex-tile bot-5'>Dosage</div>
+        <div className='text-center flex-tile bot-5'>Dosage</div>
+        <div className='text-center flex-tile bot-5'>Dosage</div>
+      </div>
 
-        <div className='flex-tile' style={{ flex: 1, margin: '0 15px', justifyContent: 'start', borderColor: '#f222fe' }}>
-          <div className='text-center flex-tile bot-5'>Dosage</div>
-          <div className='small-text text-center flex-tile bot30'>Taken everyday with dosage spread out</div>
-          <div className='text-center flex-tile bot-5'>Availability</div>
-          <div className='small-text text-center flex-tile bot30'>High</div>
-          <div className='text-center flex-tile bot-5'>Cost</div>
-          <div className='small-text text-center flex-tile bot30'>Low</div>
-          <div className='text-center flex-tile bot-5'>Notes</div>
-          <div className='small-text text-center flex-tile bot30'>Split up pills during the day to achieve the most stable levels.</div>
-          <div className='small-text text-center flex-tile bot30'> Oral tablets may have higher risk of thromboembolism compared to other routes.</div>
-        </div>
+      <div className='flex-row bot30' style={{ justifyContent: 'space-around' }}>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Taken everyday with dosage spread out</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Injection once every 1 – 2 weeks depending on drug</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Replace patch every few days</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Applied once a day after showering </div>
+      </div>
 
-        <div className='flex-tile' style={{ flex: 1, margin: '0 15px', justifyContent: 'start', borderColor: '#ff2976' }}>
-          <div className='text-center flex-tile bot-5'>Dosage</div>
-          <div className='small-text text-center flex-tile bot30'>Injection once every 1 – 2 weeks depending on drug</div>
-          <div className='text-center flex-tile bot-5'>Availability</div>
-          <div className='small-text text-center flex-tile bot30'>Moderate</div>
-          <div className='text-center flex-tile bot-5'>Cost</div>
-          <div className='small-text text-center flex-tile bot30'>Low</div>
-          <div className='text-center flex-tile bot-5'>Notes</div>
-          <div className='small-text text-center flex-tile bot30'>Easiest to remember, levels are very predictable and stable</div>
-         
-        </div>
+      <div className='flex-row' style={{ justifyContent: 'space-around' }}>
+        <div className='text-center flex-tile bot-5'>Availability</div>
+        <div className='text-center flex-tile bot-5'>Availability</div>
+        <div className='text-center flex-tile bot-5'>Availability</div>
+        <div className='text-center flex-tile bot-5'>Availability</div>
+      </div>
 
-        <div className='flex-tile' style={{ flex: 1, margin: '0 15px', justifyContent: 'start', borderColor: '#8d1eff' }}>
-          <div className='text-center flex-tile bot-5'>Dosage</div>
-          <div className='small-text text-center flex-tile bot30'>Replace patch every few days</div>
-          <div className='text-center flex-tile bot-5'>Availability</div>
-          <div className='small-text text-center flex-tile bot30'>Low</div>
-          <div className='text-center flex-tile bot-5'>Cost</div>
-          <div className='small-text text-center flex-tile bot30'>Moderate</div>
-          <div className='text-center flex-tile bot-5'>Notes</div>
-          <div className='small-text text-center flex-tile bot30'>Levels are very stable as estradiol is consistently released over time.</div>
-          <div className='small-text text-center flex-tile bot30'>If you experience indigestion side effects from pills, this could be a good replacement</div>
-        
-        </div>
+      <div className='flex-row bot30' style={{ justifyContent: 'space-around' }}>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>High</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Moderate</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Low</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Low</div>
+      </div>
 
-        <div className='flex-tile' style={{ flex: 1, margin: '0 15px', justifyContent: 'start', borderColor: '#ff8f1f' }}>
-          <div className='text-center flex-tile bot-5'>Dosage</div>
-          <div className='small-text text-center flex-tile bot30'>Applied once a day after showering </div>
-          <div className='text-center flex-tile bot-5'>Availability</div>
-          <div className='small-text text-center flex-tile bot30'>Low</div>
-          <div className='text-center flex-tile bot-5'>Cost</div>
-          <div className='small-text text-center flex-tile bot30'>High?</div>
-          <div className='text-center flex-tile bot-5'>Notes</div>
-          <div className='small-text text-center flex-tile bot30'>Can be tricky to get levels right at the start</div>
-          <div className='small-text text-center flex-tile bot30'>If you experience indigestion side effects from pills, gel could be a good replacement option</div>
-        </div>
+      <div className='flex-row' style={{ justifyContent: 'space-around' }}>
+        <div className='text-center flex-tile bot-5'>Cost</div>
+        <div className='text-center flex-tile bot-5'>Cost</div>
+        <div className='text-center flex-tile bot-5'>Cost</div>
+        <div className='text-center flex-tile bot-5'>Cost</div>
+      </div>
 
+      <div className='flex-row bot30' style={{ justifyContent: 'space-around' }}>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Low</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Low</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Moderate</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>High</div>
+      </div>
+
+      <div className='flex-row' style={{ justifyContent: 'space-around' }}>
+        <div className='text-center flex-tile bot-5'>Notes</div>
+        <div className='text-center flex-tile bot-5'>Notes</div>
+        <div className='text-center flex-tile bot-5'>Notes</div>
+        <div className='text-center flex-tile bot-5'>Notes</div>
+      </div>
+
+      <div className='flex-row bot30' style={{ justifyContent: 'space-around' }}>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Split up pills during the day to achieve the most stable levels.</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Easiest to remember, levels are very predictable and stable</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Levels are very stable as estradiol is consistently released over time.</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Can be tricky to get levels right at the start</div>
+      </div>
+
+      <div className='flex-row bot30' style={{ justifyContent: 'space-around' }}>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>Oral tablets may have higher risk of thromboembolism compared to other routes.</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}></div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>If you experience indigestion side effects from pills, this could be a good replacement</div>
+        <div className='small-text text-center flex-tile' style={{ width: '25%', margin: '0 10px', justifyContent: 'start' }}>If you experience indigestion side effects from pills, gel could be a good replacement option</div>
       </div>
 
     </div>;
@@ -386,28 +396,70 @@ class Estrogen extends Component {
 
 
     var dosage = 
-      <div className='flex-column' style={{ paddingBottom: '60px' }}>
+    <div className='flex-column' style={{ paddingBottom: '60px' }}>
 
-        <div className='flex-row'>
-          <div className='large-text text-center' style={{ margin: '30px 0 50px 0', width: '500px' }}>Dosage needed varies from person to person</div>
+      <div className='flex-row'>
+        <div className='large-text text-center' style={{ margin: '30px 0 100px 0', width: '500px' }}>Dosage needed varies from person to person</div>
+      </div>
+
+      <div className='flex-row' style={{ marginBottom: '40px' }}>
+        <div className='flex-column'>
+          <div className='flex-row'><i className="material-icons large" style={{ color: '#ff8f1f' }}>assignment</i></div>
+          <div className='med-text text-center' style={{ margin: '30px 0 80px 0', width: '480px' }}>The only way to know what your dosage should be is by taking blood tests</div>
+        </div>
+      </div>
+
+      <div className='flex-row'>
+
+        <div className='flex-column' style={{ justifyContent: 'start', maxWidth: '220px', margin: '0px 10px' }}>
+          <div className='flex-row'><i className="material-icons medium" style={{ color: '#8d1eff' }}>build</i></div>
+          <div className='med-text text-center' style={{ margin: '30px 0 50px 0' }}>A blood test is taken, then your doctor will adjust your dosage based on the results</div>
         </div>
 
-        <div className='flex-row'>
-          <div className='flex-tile' style={{ marginRight: '20px' }}><i className="material-icons medium" style={{ color: '#ff8f1f' }}>group</i></div>
-          <div className='med-text text-center' style={{ margin: '30px 0 50px 0', width: '500px' }}>Someone who is small may need only ¼ or ½ of someone who is larger to achieve the same blood levels. </div>
+        <div className='flex-column' style={{ justifyContent: 'start', maxWidth: '220px', margin: '0px 10px' }}>
+          <div className='flex-row'><i className="material-icons medium" style={{ color: '#f222fe' }}>access_time</i></div>
+          <div className='med-text text-center' style={{ margin: '30px 0 50px 0' }}>Blood tests should be taken half-way between doses so that levels shown are not disproportionally high or low</div>
         </div>
 
-        <div className='flex-row'>
-          <div className='flex-tile' style={{ marginRight: '20px' }}><i className="material-icons medium" style={{ color: '#8d1eff' }}>priority_high</i></div>
-          <div className='med-text text-center' style={{ margin: '30px 0 50px 0', width: '500px' }}>For this reason, it is extremely important to monitor blood estradiol levels via frequent blood tests.</div>
+        <div className='flex-column' style={{ justifyContent: 'start', maxWidth: '220px', margin: '0px 10px' }}>
+          <div className='flex-row'><i className="material-icons medium" style={{ color: '#ff8f1f' }}>priority_high</i></div>
+          <div className='med-text text-center' style={{ margin: '30px 0 50px 0' }}>Someone who is small may need only ¼ or ½ of someone who is larger to achieve the same blood levels. </div>
         </div>
 
-        <div className='flex-row'>
-          <div className='flex-tile' style={{ marginRight: '20px' }}><i className="material-icons medium" style={{ color: '#ff2976' }}>trending_down</i></div>
-          <div className='med-text text-center' style={{ margin: '30px 0 50px 0', width: '500px' }}>Try to achieve your desired levels using the smallest, most stable dose of estradiol to avoid possible side effects.</div>
+        <div className='flex-column' style={{ justifyContent: 'start', maxWidth: '220px', margin: '0px 10px' }}>
+          <div className='flex-row'><i className="material-icons medium" style={{ color: '#ff2976' }}>trending_down</i></div>
+          <div className='med-text text-center' style={{ margin: '30px 0 50px 0' }}>Try to achieve your desired levels using the smallest, most stable dose of estradiol to avoid possible side effects.</div>
         </div>
-        
-      </div>;
+
+      </div>
+
+      <div className='flex-row'>
+        <div className='small-text text-center' style={{ margin: '20px 0 50px 0', width: '500px' }}>This being said, typical starting doses are as follows:</div>
+      </div>
+
+      <div className='flex-row'>
+        <table style={{ width: '600px', margin: '0 0 10px 0' }}>
+          <tbody>
+            <tr>
+              <td className='text-center'><b>Estradiol & Estradiol Valerate Pills</b></td>
+              <td className='text-center'>2 - 4mg/day</td>
+            </tr>
+            <tr>
+              <td className='text-center'><b>Estradiol Transdermal Patch</b></td>
+              <td className='text-center'>0.1 - 0.4mg every 3 - 4 days</td>
+            </tr>
+            <tr>
+              <td className='text-center'><b>Estradiol Valerate Injections</b></td>
+              <td className='text-center'>5 - 30mg every 2 weeks</td>
+            </tr>
+            <tr>
+              <td className='text-center'><b>Estradiol Cypionate Injections</b></td>
+              <td className='text-center'>2 - 5mg every 2 weeks</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>;
 
 
     var risk = 
@@ -491,9 +543,9 @@ class Estrogen extends Component {
       </div>
     </div>;
 
-  var sections = [overview, effects, variation, blood_levels, administration, ETH, dosage, risk, wery];
+  var sections = [overview, effects, administration, ETH, variation, blood_levels, dosage, risk, wery];
 
-  var list = ["Estrogen Overview",  "Effects of Estrogen", "Estrogen Levels", "Blood levels", "Administration", "Estrogen types in HRT", "Dosages", "Risk Factors", "Which estrogenic drug is right for you"];
+  var list = ["Overview", "Effects", "Variability", "Blood Levels", "Dosages", "Administration", "Drugs", "Risk Factors", "How to Pick"];
  
     return (
       <Topic name='Estrogen' list={list} sections={sections}/>
