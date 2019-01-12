@@ -548,10 +548,13 @@ class Estrogen extends Component {
   var list = ["Overview", "Effects", "Variability", "Blood Levels", "Dosages", "Administration", "Drugs", "Risk Factors", "How to Pick"];
  
     return (
-      <Topic name='Estrogen' list={list} sections={sections}/>
-    );
-  }
-}
+      <div className='container'>
+        <Topic name='Estrogen' list={list} sections={sections}/>
+      </div>
+    )
+  };
+  
+};
 
 
 export default Estrogen;

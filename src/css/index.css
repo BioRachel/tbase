@@ -27,14 +27,14 @@ code {
 }
 
 body {
-  display: flex !important;
-  min-height: 100% !important;
-  flex-direction: column !important;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   font-family: 'Quicksand', sans-serif !important;
 }
 
 main {
-  flex: 1 !important;
+  flex: 1 0 auto;
 }
 
 h1 {
@@ -403,14 +403,10 @@ li {
   color: grey;
 }
 
-.back-to-top {
-  border-radius: 50%;
-  background-color: #8d1eff;
-  width: 60px;
-  height: 60px;
+.bottom-left {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 40px;
+  left: 60px;
 }
 
 .top20 {

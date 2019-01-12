@@ -154,6 +154,15 @@ class AA extends Component {
           </tbody>
         </table>
       </div>
+
+      <div className='flex-row'>
+        <div className='med-text text-center' style={{ margin: '50px 0 0px 0', width: '600px' }}>No cycling</div>
+      </div>
+    
+      <div className='flex-row'>
+        <div className='small-text text-center' style={{ margin: '10px 0 0px 0', width: '600px' }}>Unlike estrogen, testosterone does not have a cycle and remains relatively stable over time. This is why a consistent dose of anti-androgen is given.</div>
+      </div>
+
     </div>;
 
 
@@ -235,7 +244,7 @@ class AA extends Component {
 
         <div className='flex-column' style={{ justifyContent: 'start', maxWidth: '220px', margin: '0px 10px' }}>
           <div className='flex-row'><i className="material-icons medium" style={{ color: '#ff2976' }}>trending_down</i></div>
-          <div className='med-text text-center' style={{ margin: '30px 0 50px 0' }}>Try to achieve your desired levels using the smallest, most stable dose of estradiol to avoid possible side effects.</div>
+          <div className='med-text text-center' style={{ margin: '30px 0 50px 0' }}>Try to achieve your desired levels using the smallest, most stable dose of anti-androgen to avoid possible side effects.</div>
         </div>
 
       </div>
@@ -248,11 +257,11 @@ class AA extends Component {
         <table style={{ width: '400px', margin: '0 0 10px 0' }}>
           <tbody>
             <tr>
-              <td className='text-center'><b>Spironolactone</b></td>
+              <td className='text-center'><b><span style={{ color: '#2bcbba' }}>Spironolactone</span></b></td>
               <td className='text-center'>50 - 200mg/day</td>
             </tr>
             <tr>
-              <td className='text-center'><b>Cyproterone</b></td>
+              <td className='text-center'><b><span style={{ color: '#ff8f1f' }}>Cyproterone</span></b></td>
               <td className='text-center'>25 - 50mg/day</td>
             </tr>
           </tbody>
@@ -276,14 +285,14 @@ class AA extends Component {
       <div className='flex-row' style={{ justifyContent: 'space-around' }}>
         <div className='flex-column' style={{ justifyContent: 'start', width: '320px' }}>
           <div className='med-text text-center'>Feeling good</div>
-          <div className='small-text text-center' style={{ margin: '20px 0' }}>Due to possible hepatotoxicity and depression factors of cyproterone, it may be a good idea to start with spironolactone.</div>
-          <div className='small-text text-center' style={{ margin: '0 0 50px 0' }}>If you are having issues with the diuretic effect of spironolactone, talk to your doctor about switching to cyproterone as it doesn't have these side effects.</div>
+          <div className='small-text text-center' style={{ margin: '20px 0' }}>Due to possible hepatotoxicity and depression factors of <span style={{ color: '#ff8f1f' }}>cyproterone</span>, it may be a good idea to start with <span style={{ color: '#2bcbba' }}>spironolactone</span>.</div>
+          <div className='small-text text-center' style={{ margin: '0 0 50px 0' }}>If you are having issues with the diuretic effect of <span style={{ color: '#2bcbba' }}>spironolactone</span>, talk to your doctor about switching to <span style={{ color: '#ff8f1f' }}>cyproterone</span> as it doesn't have these side effects.</div>
         </div>
 
         <div className='flex-column' style={{ justifyContent: 'start', width: '320px' }}>
           <div className='med-text text-center'>Target levels</div>
-          <div className='small-text text-center' style={{ margin: '20px 0' }}>Cyproterone is very potent for most people and can reduce testosterone very effectively.</div>
-          <div className='small-text text-center' style={{ margin: '0 0 50px 0' }}>If you are on spironolactone and your blood levels aren't quite where you want them to be, you may want to talk to your doctor about switching to cyproterone.</div>
+          <div className='small-text text-center' style={{ margin: '20px 0' }}><span style={{ color: '#ff8f1f' }}>Cyproterone</span> is very potent for most people and can reduce testosterone very effectively.</div>
+          <div className='small-text text-center' style={{ margin: '0 0 50px 0' }}>If you are on <span style={{ color: '#2bcbba' }}>spironolactone</span> and your blood levels aren't quite where you want them to be, you may want to talk to your doctor about switching to <span style={{ color: '#ff8f1f' }}>cyproterone</span>.</div>
         </div>
       </div>
     </div>;
@@ -292,15 +301,14 @@ class AA extends Component {
     var sections = [overview, effects, blood_levels, drugs, dosage, pick];
 
     return (
-      <Topic name='Anti-androgen' list={list} sections={sections} />
+      <div className='container'>
+        <Topic name='Anti-androgen' list={list} sections={sections}/>
+      </div>
     )
-  }
-
   
+  };
 
-  
-
-}
+};
 
 export default AA;
 

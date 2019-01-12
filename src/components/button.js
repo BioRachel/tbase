@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 
 class Button extends Component {
   render() {
-    var ref = '#' + this.props.label;
+    var ref = '/' + this.props.area + '/' + this.props.name;
 
     return (
-      <a href={ref} className={this.props.class}>
+      <Link to={ref} className={this.props.class}>
         {this.props.label}
-      </a>
+      </Link>
     );
   }
 }

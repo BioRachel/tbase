@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 class TopNav extends Component {
   render() {
     return (
+ 
       <nav id='top'>
         <div className="nav-wrapper purple_grad">
         <div className="row">
@@ -23,6 +24,7 @@ class TopNav extends Component {
         </div>
         </div>
       </nav>
+
     );
   }
 }
