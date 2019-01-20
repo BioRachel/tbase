@@ -9,7 +9,6 @@ import HRTaccess from './hrtaccess';
 import Surgeons from './surgeons';
 import Store from './store';
 import Contact from './contact';
-import Footer from './footer';
 import estrogen from './estrogen';
 import OtherDrugs from './other_drugs';
 import OtherDrugsFTM from './FTM_other_drugs';
@@ -32,7 +31,6 @@ class App extends Component {
         <Route exact path='/surgeons' component={Surgeons} />
         <Route exact path='/store' component={Store} />
         <Route exact path='/contact' component={Contact} />
-        <Footer />
       </div>
     );
   }
